@@ -1,0 +1,13 @@
+name: Fail always
+
+on:
+    pull_request:
+        branches:
+            - '*'
+
+jobs:
+    Fail-always-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Fail step
+              run: exit 1
